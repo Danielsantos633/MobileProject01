@@ -1,17 +1,37 @@
+<!-- https://www.youtube.com/watch?v=gEVYAdwDHwg -->
+<!-- www.google.com/maps/search/?api=1&query= -->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title class="Titulo"> Página Inicial </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="Conteudo animate__animated animate__fadeInLeft">
+    <img class="Img-Item" src="assets/images/Doacao.jpg"/>
+    <p>
+      Existem pessoas precisando muito da sua ajuda!<br><br>
+      Veja abaixo como doar.
+    </p>
+        
+    <ion-card [routerLink]="['/tabs/tab2']">
+      <ion-item>
+        <ion-thumbnail slot="start">          
+          <img src="assets/images/Doar.jpg"/>
+        </ion-thumbnail>
+        <ion-label>Realizar uma doação</ion-label>
+      </ion-item>
+    </ion-card>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-card [routerLink]="['/tabs/tab3']">
+      <ion-item>
+        <ion-thumbnail slot="start">          
+          <img src="assets/images/Receber.jpg"/>
+        </ion-thumbnail>
+        <ion-label>Solicitar uma doação</ion-label>
+      </ion-item>
+    </ion-card>
+
+  </div>
 </ion-content>

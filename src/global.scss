@@ -1,13 +1,4 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
+
 
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
@@ -24,3 +15,85 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.Titulo {
+    text-align: center;
+    background-color: #003bfc;
+}
+
+.Conteudo {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+
+}
+
+.Img-Item {
+    padding: 20px;
+    padding-bottom: 0px;
+    width: 100%;
+    max-width: 400px;    
+
+    animation: animation-img-item 2s infinite alternate;
+}
+
+ion-card {
+    border-radius: 15px;
+    margin-bottom: 5px;  
+    cursor: pointer;
+    transition-duration: 500ms ;
+}
+
+ion-card:hover {
+    transform: scale(1.03);
+}
+
+ion-thumbnail {
+    animation: animation-thumbnail-item 4s infinite alternate;
+}
+
+
+@keyframes animation-thumbnail-item {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animation-img-item {
+    0% {
+        transform:  scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1.04);
+    }
+
+}
+
+:root {
+    //--ion-font-famiy:'Varela Round, sans-serif';
+
+    --ion-toolbar-backgroud: #29065a;
+    --ion-toolbar-color: #fdfdfd;
+
+    --ion-back-ground-color: linear-gradient(180deg, #29065a 0%, #7314fd 100%);
+
+    --ion-tab-bar-backgroud: #29065a;
+    --ion-tab-bar-color: #000000;
+    --ion-tab-bar-color-selected: #0082fc;
+
+    --ion-text-color: grey;
+    --ion-text-color-rgb:1, 1, 1;
+
+    --ion-card-background: white;
+    --ion-item-backgroud: transparent;
+    
+}

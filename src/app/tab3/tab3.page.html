@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title class="Titulo"> Receber Doações </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="Conteudo animate__animated animate__fadeInleft">
+    <img src="assets/images/AbracoImage.jpg"/>
+  
+    <p class="Titulo">
+      Está precisando de ajuda?<br>
+      Podemos te ajudar!<br>
+      Preencha os campos e fale com um voluntário.
+    </p>
+    
+    <form [formGroup]="form" (submit)="enviar()">
+      <ion-item>
+        <ion-label position="floating">Nome Completo</ion-label>
+        <ion-input type="text" formControlName="nome"></ion-input>
+      </ion-item>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+      <ion-item>
+        <ion-label position="floating">Endereço</ion-label>
+        <ion-input type="text" formControlName="endereco"></ion-input>
+      </ion-item>
+      <ion-button [disabled]="form.invalid || form.pending" expand="block" type="submit">
+        Salvar
+      </ion-button>
+    </form>
+
+  </div>
 </ion-content>
